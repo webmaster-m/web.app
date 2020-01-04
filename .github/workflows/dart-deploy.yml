@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
       - name: Install Dependencies
-        run: pub get
+        run: pub get &&  pub global activate webdev
       - name: Run Tests
         run: pub run test
       - name: Build Code

@@ -1,0 +1,31 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    conrainer:
+      image:  google/dart:latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Install Dependencies
+        run: pub get
+      - name: Run Tests
+        run: pub run tests
+      - name: Build Code
+        run: webdev build
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
+          github_token:
+          # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
+          repository: # optional, default is
+          # Destination branch to push changes
+          branch: # optional, default is master
+          # Determines if force push is used
+          force: # optional
+          # Directory to change to before pushing.
+          directory: # optional, default is .

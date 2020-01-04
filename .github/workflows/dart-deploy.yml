@@ -26,7 +26,7 @@ jobs:
       - name: Run Tests
         run: pub run test
       - name: Build Code
-        run: webdev build
+        run: echo $PATH && webdev build
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
         with:

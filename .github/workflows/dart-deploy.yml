@@ -20,7 +20,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Add pub binaries to path
-        run: export $PATH:$HOME/.pub-cache/bin
+        run: export $PATH:~/.pub-cache/bin
       - name: Install Dependencies
         run: pub get &&  pub global activate webdev
       - name: Run Tests

@@ -4,18 +4,18 @@
 updateBranch: true
 deleteBranchAfterMerge: true
 reportStatus: true
+mergemethod: merge
 
 minApprovals:
-  COLLABORATOR: 0
+  COLLABORATOR: 1
 maxRequestedChanges:
   NONE: 0
 blockingLabels:
 - blocked
+requiredBodyRegex: '(^|\\s)lgtm($|\\s)'
+mergeCommitMessage: |
+        {title} (#{number})
+        {body}
 
 # Will merge whenever the above conditions are met, but also
 # the owner has approved or merge label was added.
-rules:
-- minApprovals:
-    OWNER: 1
-- requiredLabels:
-  - merge

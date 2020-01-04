@@ -1,19 +1,10 @@
 name: Dart Development PR
 
-on:
-  pull_request:
-    branches:
-      - development
-      - 'feature/**'
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image:  google/dart:latest
     steps:
-    - uses: actions/checkout@v1
     - name: Install dependencies
-      run: pub get
-    - name: Run tests
-      run: pub run test
+      run: $echo GITHUB_BASE_REF

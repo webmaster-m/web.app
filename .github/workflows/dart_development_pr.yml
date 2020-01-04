@@ -2,9 +2,8 @@ name: Dart Development PR
 
 on:
   pull_request:
-    branches-ignore:
-      - release
-      - master
+    branches:
+      - development
 
 jobs:
   build:

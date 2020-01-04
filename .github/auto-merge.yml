@@ -2,7 +2,7 @@
 # Configuration for probot-auto-merge - https://github.com/bobvanderlinden/probot-auto-merge
 
 updateBranch: true
-#deleteBranchAfterMerge: true
+deleteBranchAfterMerge: true
 reportStatus: true
 mergemethod: merge
 
@@ -12,9 +12,9 @@ maxRequestedChanges:
   NONE: 0
 blockingLabels:
 - blocked
-#mergeCommitMessage: |
-#        {title} (#{number})
-#        {body}
+mergeCommitMessage: |
+        {title} (#{number})
+        {body}
 
 # Will merge whenever the above conditions are met, but also
 # the owner has approved or merge label was added.

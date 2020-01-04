@@ -1,6 +1,9 @@
 name: Dart Development PR
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - development
 
 jobs:
   build:

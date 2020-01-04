@@ -10,6 +10,15 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
+      - name: Cache dart dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.pub-cache # pub cache files are stored in `~/.pub-cache` on Linux/macOS
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
       - name: Install Dependencies
         run: pub get &&  pub global activate webdev
       - name: Run Tests

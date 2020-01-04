@@ -14,7 +14,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.pub-cache # pub cache files are stored in `~/.pub-cache` on Linux/macOS
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pubspec.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pubspec.yml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-

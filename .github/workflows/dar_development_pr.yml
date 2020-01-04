@@ -1,15 +1,15 @@
-name: Dart CI
+name: Dart Development PR
 
-on: [push]
+on:
+  pull_request:
+    branches:
+      - development
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     container:
       image:  google/dart:latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies

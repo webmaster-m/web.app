@@ -2,8 +2,7 @@ name: Mark PR Mergeable
 
 on:
   check_suite:
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   build:

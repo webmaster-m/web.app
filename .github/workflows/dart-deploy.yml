@@ -17,7 +17,7 @@ jobs:
       - name: Build Code
         run: webdev build
         env:
-          PATH: $PATH:$HOME/.pub-cache/bin
+          PATH: $PATH:"$HOME/.pub-cache/bin"
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
         with:

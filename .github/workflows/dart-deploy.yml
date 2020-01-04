@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
-      - name: List checked out files
-        run: ls -l && pwd
       - name: Cache dart dependencies
         uses: actions/cache@v1
         with:
@@ -21,14 +19,14 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Add pub binaries to path
+        run: export $PATH:$HOME/.pub-cache/bin
       - name: Install Dependencies
         run: pub get &&  pub global activate webdev
       - name: Run Tests
         run: pub run test
       - name: Build Code
         run: webdev build
-        env:
-          PATH: $PATH:"$HOME/.pub-cache/bin"
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
         with:

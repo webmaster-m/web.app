@@ -12,7 +12,7 @@ maxRequestedChanges:
   NONE: 0
 blockingLabels:
 - blocked
-requiredBodyRegex: '(^|\\s)lgtm($|\\s)'
+# requiredBodyRegex: '(^|\\s)lgtm($|\\s)'
 mergeCommitMessage: |
         {title} (#{number})
         {body}

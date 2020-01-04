@@ -1,8 +1,6 @@
 name: Dart Development PR
 
-on:
-  pull_request:
-    - types: [opened]
+on: [pull_request]
 
 jobs:
   build:

@@ -1,0 +1,17 @@
+targets:
+  $default:
+    builders:
+      web|copyBuilder:
+        generate_for:
+          - lib/*
+        enabled: True
+
+builders:
+  copyBuilder:
+    import: 'package:web/code_generators.dart'
+    builder_factories: ['copyBuilder']
+    build_extensions:
+      .txt:
+        - .copy.txt
+    build_to: source
+    auto_apply: dependents

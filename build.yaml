@@ -1,14 +1,14 @@
 targets:
   $default:
     builders:
-      web|copyBuilder:
+      mrigesh.dev|copyBuilder:
         generate_for:
           - lib/*
         enabled: True
 
 builders:
   copyBuilder:
-    import: 'package:web/code_generators.dart'
+    import: 'package:mrigesh.dev/web_builder.dart'
     builder_factories: ['copyBuilder']
     build_extensions:
       .txt:

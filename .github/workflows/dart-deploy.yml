@@ -26,7 +26,7 @@ jobs:
       - name: Build Code
         run: $HOME/.pub-cache/bin/webdev build && ls -la build/
       - name: Check Build files
-        run: ls -la &&  ls -la build/
+        run: ls -la &&  ls -la build/ && pwd
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
         with:

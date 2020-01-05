@@ -24,7 +24,7 @@ jobs:
       - name: Run Tests
         run: pub run test
       - name: Build Code
-        run: $HOME/.pub-cache/bin/webdev build && ls -la
+        run: $HOME/.pub-cache/bin/webdev build && ls -la build/
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
         with:

@@ -37,4 +37,4 @@ jobs:
           # Determines if force push is used
           force: true
           # Directory to change to before pushing.
-          directory: build/
+          directory: build

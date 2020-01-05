@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
-      - name: Install Dependencies
-        run: pub get &&  pub global activate webdev
       - name: Cache dart dependencies
         uses: actions/cache@v1
         with:
@@ -21,6 +19,8 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Install Dependencies
+        run: pub get &&  pub global activate webdev
       - name: Run Tests
         run: pub run test
       - name: Build Code

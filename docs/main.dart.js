@@ -59,9 +59,9 @@ return{inherit:inherit,inheritMany:inheritMany,mixin:mixin,installStaticTearOff:
 function initializeDeferredHunk(a){x=v.types.length
 a(hunkHelpers,v,w,$)}function getGlobalFromName(a){for(var u=0;u<w.length;u++){if(w[u]==null)continue
 if(w[u][a])return w[u][a]}}var J={a:function a(){}},P={b:function b(){},c:function c(){}},W={},F={
-e:function(){var u="Mrigesh Pokhrel",t=document
-t.querySelector("#output").textContent=u
-t.querySelector("title").textContent=u}}
+e:function(){var u=document
+u.querySelector("#op_name").textContent="Mrigesh Pokhrel"
+u.querySelector("title").textContent="Mrigesh Pokhrel : Resume"}}
 var w=[J,P,W,F]
 hunkHelpers.setFunctionNamesIfNecessary(w)
 var $={}
